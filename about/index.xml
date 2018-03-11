@@ -11,17 +11,5 @@
 	<atom:link href="https://okiptkn.github.io/about/index.xml" rel="self" type="application/rss+xml" />
     
     
-    <item>
-      <title>colophon</title>
-      <link>https://okiptkn.github.io/about/colophon/</link>
-      <pubDate>Sat, 22 Aug 2015 06:28:26 -0700</pubDate>
-      
-      <guid>https://okiptkn.github.io/about/colophon/</guid>
-      <description>Personal website hosted using github pages.
-The site is built with Hugo—a static site generator made with Go. It uses the cocoa theme. The posts are written in Markdown.
-The primary font face is Open Sans and the monospace font face is Ubuntu Mono. The social icons are from the Ionicons font set. CSS classes for code syntax highlighting are inserted during compile-time by Hugo using Pygments.
-If you find errors, please let me know.</description>
-    </item>
-    
   </channel>
 </rss>

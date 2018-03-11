@@ -6,10 +6,35 @@
     <description>Recent content on github | okiptkn</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Thu, 08 Mar 2018 13:49:41 +0700</lastBuildDate>
+    <lastBuildDate>Sun, 11 Mar 2018 16:14:46 +0700</lastBuildDate>
     
 	<atom:link href="https://okiptkn.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Clipboard&#39;s copy-paste in Vim</title>
+      <link>https://okiptkn.github.io/blog/clipboards-copy-paste-in-vim/</link>
+      <pubDate>Sun, 11 Mar 2018 16:14:46 +0700</pubDate>
+      
+      <guid>https://okiptkn.github.io/blog/clipboards-copy-paste-in-vim/</guid>
+      <description>Simple &amp;ldquo;copy-paste&amp;rdquo; method from clipboard using xsel
+Install xsel sudo pacman -S xsel  Create some keymap on your ~/.vimrc &amp;quot; Copy to X CLIPBOARD map &amp;lt;leader&amp;gt;cc :w !xsel -i -b&amp;lt;CR&amp;gt; map &amp;lt;leader&amp;gt;cp :w !xsel -i -p&amp;lt;CR&amp;gt; map &amp;lt;leader&amp;gt;cs :w !xsel -i -s&amp;lt;CR&amp;gt; &amp;quot; Paste from X CLIPBOARD map &amp;lt;leader&amp;gt;pp :r!xsel -p&amp;lt;CR&amp;gt; map &amp;lt;leader&amp;gt;ps :r!xsel -s&amp;lt;CR&amp;gt; map &amp;lt;leader&amp;gt;pb :r!xsel -b&amp;lt;CR&amp;gt;  note that &amp;lt;leader&amp;gt; here is mapped to backslash key \ by default</description>
+    </item>
+    
+    <item>
+      <title>Wallpapers</title>
+      <link>https://okiptkn.github.io/extras/wallpapers/</link>
+      <pubDate>Sun, 11 Mar 2018 15:09:04 +0700</pubDate>
+      
+      <guid>https://okiptkn.github.io/extras/wallpapers/</guid>
+      <description>01
+      02
+      03
+      04
+      05
+      06
+      07</description>
+    </item>
     
     <item>
       <title>Hello World!</title>
@@ -23,10 +48,10 @@ echo &amp;quot;yay&amp;quot;  </description>
     
     <item>
       <title>colophon</title>
-      <link>https://okiptkn.github.io/about/colophon/</link>
+      <link>https://okiptkn.github.io/extras/colophon/</link>
       <pubDate>Sat, 22 Aug 2015 06:28:26 -0700</pubDate>
       
-      <guid>https://okiptkn.github.io/about/colophon/</guid>
+      <guid>https://okiptkn.github.io/extras/colophon/</guid>
       <description>Personal website hosted using github pages.
 The site is built with Hugo—a static site generator made with Go. It uses the cocoa theme. The posts are written in Markdown.
 The primary font face is Open Sans and the monospace font face is Ubuntu Mono. The social icons are from the Ionicons font set. CSS classes for code syntax highlighting are inserted during compile-time by Hugo using Pygments.

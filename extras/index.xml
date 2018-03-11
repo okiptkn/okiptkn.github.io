@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Extras on github | okiptkn</title>
+    <link>https://okiptkn.github.io/extras/</link>
+    <description>Recent content in Extras on github | okiptkn</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Sun, 11 Mar 2018 15:09:04 +0700</lastBuildDate>
+    
+	<atom:link href="https://okiptkn.github.io/extras/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Wallpapers</title>
+      <link>https://okiptkn.github.io/extras/wallpapers/</link>
+      <pubDate>Sun, 11 Mar 2018 15:09:04 +0700</pubDate>
+      
+      <guid>https://okiptkn.github.io/extras/wallpapers/</guid>
+      <description>01
+      02
+      03
+      04
+      05
+      06
+      07</description>
+    </item>
+    
+    <item>
+      <title>colophon</title>
+      <link>https://okiptkn.github.io/extras/colophon/</link>
+      <pubDate>Sat, 22 Aug 2015 06:28:26 -0700</pubDate>
+      
+      <guid>https://okiptkn.github.io/extras/colophon/</guid>
+      <description>Personal website hosted using github pages.
+The site is built with Hugo—a static site generator made with Go. It uses the cocoa theme. The posts are written in Markdown.
+The primary font face is Open Sans and the monospace font face is Ubuntu Mono. The social icons are from the Ionicons font set. CSS classes for code syntax highlighting are inserted during compile-time by Hugo using Pygments.
+If you find errors, please let me know.</description>
+    </item>
+    
+  </channel>
+</rss>
