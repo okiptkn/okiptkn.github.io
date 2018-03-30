@@ -33,6 +33,7 @@ sudo pacman -S xsel  Create some keymap on your ~/.vimrc &amp;quot; Copy to X CL
       03
       04
       05
+      06
     </description>
     </item>
     
