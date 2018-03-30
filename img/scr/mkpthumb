@@ -1,0 +1,4 @@
+#!/bin/sh
+#
+
+convert $1.png -resize 260x195 $1-thumb.png
