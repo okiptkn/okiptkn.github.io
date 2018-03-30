@@ -18,7 +18,8 @@
       
       <guid>https://okiptkn.github.io/blog/clipboards-copy-paste-in-vim/</guid>
       <description>Simple &amp;ldquo;copy-paste&amp;rdquo; method from clipboard using xsel
-Install xsel sudo pacman -S xsel  Create some keymap on your ~/.vimrc &amp;quot; Copy to X CLIPBOARD map &amp;lt;leader&amp;gt;cc :w !xsel -i -b&amp;lt;CR&amp;gt; map &amp;lt;leader&amp;gt;cp :w !xsel -i -p&amp;lt;CR&amp;gt; map &amp;lt;leader&amp;gt;cs :w !xsel -i -s&amp;lt;CR&amp;gt; &amp;quot; Paste from X CLIPBOARD map &amp;lt;leader&amp;gt;pp :r!xsel -p&amp;lt;CR&amp;gt; map &amp;lt;leader&amp;gt;ps :r!xsel -s&amp;lt;CR&amp;gt; map &amp;lt;leader&amp;gt;pb :r!xsel -b&amp;lt;CR&amp;gt;  note that &amp;lt;leader&amp;gt; here is mapped to backslash key \ by default</description>
+Install xsel example using arch :
+sudo pacman -S xsel  Create some keymap on your ~/.vimrc &amp;quot; Copy to X CLIPBOARD map &amp;lt;leader&amp;gt;cc :w !xsel -i -b&amp;lt;CR&amp;gt; map &amp;lt;leader&amp;gt;cp :w !xsel -i -p&amp;lt;CR&amp;gt; map &amp;lt;leader&amp;gt;cs :w !xsel -i -s&amp;lt;CR&amp;gt; &amp;quot; Paste from X CLIPBOARD map &amp;lt;leader&amp;gt;pp :r!xsel -p&amp;lt;CR&amp;gt; map &amp;lt;leader&amp;gt;ps :r!xsel -s&amp;lt;CR&amp;gt; map &amp;lt;leader&amp;gt;pb :r!xsel -b&amp;lt;CR&amp;gt;  note that &amp;lt;leader&amp;gt; here is mapped to backslash key \ by default</description>
     </item>
     
     <item>
