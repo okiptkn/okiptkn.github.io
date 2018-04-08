@@ -11,12 +11,12 @@
 <meta name="author" content="Restu Purnomo">
 <meta name="description" content="so yesterday when i was trying out this rather interesting wm(?), i found this auto-blur background script. It simply uses hsetroot to set a blurred image output as background. and i thought i would like one for my desktop.
 so here is the script (directly copied) :
-#!/bin/bash win=&quot;$(lsw)&quot; if [[ $win ]]; then hsetroot -fill $HOME/wall.jpg -blur 15 else hsetroot -fill $HOME/wall.jpg -blur 15 fi  the two main point is : the lsw command that according the wmutils readme it&rsquo;s a utility to list window on current workspaces and another one is hsetroot command to blur the image as well as set the background">
+#!/bin/bash win=&quot;$(lsw)&quot; if [[ $win ]]; then hsetroot -fill $HOME/wall.jpg -blur 15 else hsetroot -fill $HOME/wall.jpg -blur 15 fi  the two main point is : the lsw command that according the wmutils readme is a utility to list window and another one is hsetroot command to blur the image as well as set the background">
 
 <meta property="og:title" content="Auto-blur background script with hsetroot and xdotool" />
 <meta property="og:description" content="so yesterday when i was trying out this rather interesting wm(?), i found this auto-blur background script. It simply uses hsetroot to set a blurred image output as background. and i thought i would like one for my desktop.
 so here is the script (directly copied) :
-#!/bin/bash win=&quot;$(lsw)&quot; if [[ $win ]]; then hsetroot -fill $HOME/wall.jpg -blur 15 else hsetroot -fill $HOME/wall.jpg -blur 15 fi  the two main point is : the lsw command that according the wmutils readme it&rsquo;s a utility to list window on current workspaces and another one is hsetroot command to blur the image as well as set the background" />
+#!/bin/bash win=&quot;$(lsw)&quot; if [[ $win ]]; then hsetroot -fill $HOME/wall.jpg -blur 15 else hsetroot -fill $HOME/wall.jpg -blur 15 fi  the two main point is : the lsw command that according the wmutils readme is a utility to list window and another one is hsetroot command to blur the image as well as set the background" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://okiptkn.github.io/blog/auto-blur-background-script-with-hsetroot-and-xdotool/" />
 
@@ -61,11 +61,11 @@ so here is the script (directly copied) :
 
 
     
-    <link rel="stylesheet" href="https://okiptkn.github.io/css/reset.css?t=2018-04-08%2021%3a27%3a41.303301991%20%2b0700%20WIB%20m%3d%2b0.100034424">
-    <link rel="stylesheet" href="https://okiptkn.github.io/css/pygments.css?t=2018-04-08%2021%3a27%3a41.303301991%20%2b0700%20WIB%20m%3d%2b0.100034424">
-    <link rel="stylesheet" href="https://okiptkn.github.io/css/main.css?t=2018-04-08%2021%3a27%3a41.303301991%20%2b0700%20WIB%20m%3d%2b0.100034424">
+    <link rel="stylesheet" href="https://okiptkn.github.io/css/reset.css?t=2018-04-08%2021%3a33%3a19.027872742%20%2b0700%20WIB%20m%3d%2b0.087807706">
+    <link rel="stylesheet" href="https://okiptkn.github.io/css/pygments.css?t=2018-04-08%2021%3a33%3a19.027872742%20%2b0700%20WIB%20m%3d%2b0.087807706">
+    <link rel="stylesheet" href="https://okiptkn.github.io/css/main.css?t=2018-04-08%2021%3a33%3a19.027872742%20%2b0700%20WIB%20m%3d%2b0.087807706">
     
-        <link rel="stylesheet" href="https://okiptkn.github.io/css/override.css?t=2018-04-08%2021%3a27%3a41.303301991%20%2b0700%20WIB%20m%3d%2b0.100034424">
+        <link rel="stylesheet" href="https://okiptkn.github.io/css/override.css?t=2018-04-08%2021%3a33%3a19.027872742%20%2b0700%20WIB%20m%3d%2b0.087807706">
     
 
 
@@ -255,7 +255,7 @@ else
 fi
 </code></pre>
 
-<p>the two main point is : the <code>lsw</code> command that <a href="https://github.com/wmutils/core">according the wmutils readme</a> it&rsquo;s a utility to list window on current workspaces and another one is <code>hsetroot</code> command to blur the image as well as set the background</p>
+<p>the two main point is : the <code>lsw</code> command that <a href="https://github.com/wmutils/core">according the wmutils readme</a> is a utility to list window and another one is <code>hsetroot</code> command to blur the image as well as set the background</p>
 
 <h4 id="looking-for-alternatives">looking for alternatives</h4>
 
@@ -274,7 +274,7 @@ fi
     win=&quot;$(xdotool getactivewindow)&quot;
     
     # check if the command above output something and run hsetroot 
-    if [[ $tit -eq 0 ]]; then
+    if [[ $win -eq 0 ]]; then
         hsetroot -fill /path/yourimage.png
     else
         hsetroot -fill /path/yourimage.png -blur 4
