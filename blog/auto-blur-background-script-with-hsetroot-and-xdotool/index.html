@@ -9,22 +9,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="referrer" content="no-referrer">
 <meta name="author" content="Restu Purnomo">
-<meta name="description" content="Simple &ldquo;copy-paste&rdquo; method from clipboard using xsel
-Install xsel example using arch :
-sudo pacman -S xsel  Create some keymap on your ~/.vimrc &quot; Copy to X CLIPBOARD map &lt;leader&gt;cc :w !xsel -i -b&lt;CR&gt; map &lt;leader&gt;cp :w !xsel -i -p&lt;CR&gt; map &lt;leader&gt;cs :w !xsel -i -s&lt;CR&gt; &quot; Paste from X CLIPBOARD map &lt;leader&gt;pp :r!xsel -p&lt;CR&gt; map &lt;leader&gt;ps :r!xsel -s&lt;CR&gt; map &lt;leader&gt;pb :r!xsel -b&lt;CR&gt;  note that &lt;leader&gt; here is mapped to backslash key \ by default">
+<meta name="description" content="so yesterday when i was trying out this rather interesting wm(?), i found this auto-blur background script. It simply uses hsetroot to set a blurred image output as background. and i thought i would like one for my desktop.
+so here is the script (directly copied) :
+#!/bin/bash win=&quot;$(lsw)&quot; if [[ $win ]]; then hsetroot -fill $HOME/wall.jpg -blur 15 else hsetroot -fill $HOME/wall.jpg -blur 15 fi  the two main point is : * the lsw command that by the wmutils readme is a utility to list window on current workspaces * and the hsetroot command to blur the image as well as set the background">
 
-<meta property="og:title" content="Clipboard&#39;s copy-paste in Vim" />
-<meta property="og:description" content="Simple &ldquo;copy-paste&rdquo; method from clipboard using xsel
-Install xsel example using arch :
-sudo pacman -S xsel  Create some keymap on your ~/.vimrc &quot; Copy to X CLIPBOARD map &lt;leader&gt;cc :w !xsel -i -b&lt;CR&gt; map &lt;leader&gt;cp :w !xsel -i -p&lt;CR&gt; map &lt;leader&gt;cs :w !xsel -i -s&lt;CR&gt; &quot; Paste from X CLIPBOARD map &lt;leader&gt;pp :r!xsel -p&lt;CR&gt; map &lt;leader&gt;ps :r!xsel -s&lt;CR&gt; map &lt;leader&gt;pb :r!xsel -b&lt;CR&gt;  note that &lt;leader&gt; here is mapped to backslash key \ by default" />
+<meta property="og:title" content="Auto-blur background script with hsetroot and xdotool" />
+<meta property="og:description" content="so yesterday when i was trying out this rather interesting wm(?), i found this auto-blur background script. It simply uses hsetroot to set a blurred image output as background. and i thought i would like one for my desktop.
+so here is the script (directly copied) :
+#!/bin/bash win=&quot;$(lsw)&quot; if [[ $win ]]; then hsetroot -fill $HOME/wall.jpg -blur 15 else hsetroot -fill $HOME/wall.jpg -blur 15 fi  the two main point is : * the lsw command that by the wmutils readme is a utility to list window on current workspaces * and the hsetroot command to blur the image as well as set the background" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://okiptkn.github.io/blog/clipboards-copy-paste-in-vim/" />
+<meta property="og:url" content="https://okiptkn.github.io/blog/auto-blur-background-script-with-hsetroot-and-xdotool/" />
 
 
 
-<meta property="article:published_time" content="2018-03-11T16:14:46&#43;07:00"/>
+<meta property="article:published_time" content="2018-04-08T18:16:54&#43;07:00"/>
 
-<meta property="article:modified_time" content="2018-03-11T16:14:46&#43;07:00"/>
+<meta property="article:modified_time" content="2018-04-08T18:16:54&#43;07:00"/>
 
 
 
@@ -40,10 +40,10 @@ sudo pacman -S xsel  Create some keymap on your ~/.vimrc &quot; Copy to X CLIPBO
 <title>
 
 
-     Clipboard&#39;s copy-paste in Vim 
+     Auto-blur background script with hsetroot and xdotool 
 
 </title>
-<link rel="canonical" href="https://okiptkn.github.io/blog/clipboards-copy-paste-in-vim/">
+<link rel="canonical" href="https://okiptkn.github.io/blog/auto-blur-background-script-with-hsetroot-and-xdotool/">
 
 
 
@@ -61,11 +61,11 @@ sudo pacman -S xsel  Create some keymap on your ~/.vimrc &quot; Copy to X CLIPBO
 
 
     
-    <link rel="stylesheet" href="https://okiptkn.github.io/css/reset.css?t=2018-04-08%2021%3a15%3a57.665710537%20%2b0700%20WIB%20m%3d%2b0.105017071">
-    <link rel="stylesheet" href="https://okiptkn.github.io/css/pygments.css?t=2018-04-08%2021%3a15%3a57.665710537%20%2b0700%20WIB%20m%3d%2b0.105017071">
-    <link rel="stylesheet" href="https://okiptkn.github.io/css/main.css?t=2018-04-08%2021%3a15%3a57.665710537%20%2b0700%20WIB%20m%3d%2b0.105017071">
+    <link rel="stylesheet" href="https://okiptkn.github.io/css/reset.css?t=2018-04-08%2021%3a15%3a57.660197751%20%2b0700%20WIB%20m%3d%2b0.099504255">
+    <link rel="stylesheet" href="https://okiptkn.github.io/css/pygments.css?t=2018-04-08%2021%3a15%3a57.660197751%20%2b0700%20WIB%20m%3d%2b0.099504255">
+    <link rel="stylesheet" href="https://okiptkn.github.io/css/main.css?t=2018-04-08%2021%3a15%3a57.660197751%20%2b0700%20WIB%20m%3d%2b0.099504255">
     
-        <link rel="stylesheet" href="https://okiptkn.github.io/css/override.css?t=2018-04-08%2021%3a15%3a57.665710537%20%2b0700%20WIB%20m%3d%2b0.105017071">
+        <link rel="stylesheet" href="https://okiptkn.github.io/css/override.css?t=2018-04-08%2021%3a15%3a57.660197751%20%2b0700%20WIB%20m%3d%2b0.099504255">
     
 
 
@@ -224,7 +224,7 @@ sudo pacman -S xsel  Create some keymap on your ~/.vimrc &quot; Copy to X CLIPBO
                 <div class="title-container">
                     <div class="page-heading">
 
-    Clipboard&#39;s copy-paste in Vim
+    Auto-blur background script with hsetroot and xdotool
 
 </div>
 
@@ -232,38 +232,74 @@ sudo pacman -S xsel  Create some keymap on your ~/.vimrc &quot; Copy to X CLIPBO
                 </div>
                 <div class="meta">
                     
-                    <div class="date" title='Sun Mar 11 2018 34:114:46 WIB'>Mar 11, 2018</div>
+                    <div class="date" title='Sun Apr 8 2018 46:86:54 WIB'>Apr 8, 2018</div>
                     
                     
-		    <div class="reading-time"><div class="middot"></div>One minute read</div>
+		    <div class="reading-time"><div class="middot"></div>2 minutes read</div>
                     
                 </div>
             </div>
             <div class="markdown">
                 
 
-<p>Simple &ldquo;copy-paste&rdquo; method from clipboard using xsel</p>
+<p>so yesterday when i was trying out this <a href="https://github.com/wmutils">rather interesting</a> wm(?), i found <a href="https://github.com/tymscar/wmutilsrc/blob/master/scripts/blur">this</a> auto-blur background script. It simply uses hsetroot to set a blurred image output as background. and i thought i would like one for my desktop.</p>
 
-<h3 id="install-xsel">Install <code>xsel</code></h3>
+<p>so here is the script (directly copied) :</p>
 
-<p>example using arch :</p>
-
-<pre><code>sudo pacman -S xsel
+<pre><code>#!/bin/bash
+win=&quot;$(lsw)&quot;
+if [[ $win ]]; then
+	hsetroot -fill $HOME/wall.jpg -blur 15
+else
+	hsetroot -fill $HOME/wall.jpg -blur 15
+fi
 </code></pre>
 
-<h3 id="create-some-keymap-on-your-vimrc">Create some keymap on your <code>~/.vimrc</code></h3>
+<p>the two main point is :
+* the <code>lsw</code> command that <a href="https://github.com/wmutils/core">by the wmutils readme</a> is a utility to list window on current workspaces
+* and the <code>hsetroot</code> command to blur the image as well as set the background</p>
 
-<pre><code>&quot; Copy to X CLIPBOARD
-map &lt;leader&gt;cc :w !xsel -i -b&lt;CR&gt;
-map &lt;leader&gt;cp :w !xsel -i -p&lt;CR&gt;
-map &lt;leader&gt;cs :w !xsel -i -s&lt;CR&gt;
-&quot; Paste from X CLIPBOARD
-map &lt;leader&gt;pp :r!xsel -p&lt;CR&gt;
-map &lt;leader&gt;ps :r!xsel -s&lt;CR&gt;
-map &lt;leader&gt;pb :r!xsel -b&lt;CR&gt;
+<h4 id="looking-for-alternatives">looking for alternatives</h4>
+
+<p>First, we need to replace <code>lsw</code> with more common alternatives, one i could think of is <code>wmctrl</code> but running <code>wmctrl -l</code> will list all opened windows on every workspaces, you could probably specify a current workspaces for that but i doubt it would work on any wm without emwh support. And the other one is using <code>xdotool</code>, luckily it has a wonderfully convenient command to simply output the current active window id</p>
+
+<pre><code>xdotool getactivewindow
 </code></pre>
 
-<p>note that <code>&lt;leader&gt;</code> here is mapped to backslash key <code>\</code> by default</p>
+<p>so let use this for the script</p>
+
+<pre><code>#!/bin/bash
+#
+
+# write the function first
+  lalala() {
+    win=&quot;$(xdotool getactivewindow)&quot;
+    
+    # check if the command above output something and run hsetroot if it does
+    if [[ $tit -eq 0 ]]; then
+        hsetroot -fill /path/yourimage.png
+    else
+        hsetroot -fill /path/yourimage.png -blur 4
+    fi
+}
+
+# and then loop it
+_main() {
+    while true ; do
+        echo &quot;$(lalala)&quot;
+        sleep 1
+    done
+} &gt; /dev/null 2&gt;&amp;1
+
+# now call the main function
+_main&quot;$@&quot;
+</code></pre>
+
+<p>this should be enough to get it running</p>
+
+<ul>
+<li>Also you may want to take a look at my ready made script on <a href="https://github.com/okiptkn/dotfiles/tree/master/.scripts/abg"><strong>here</strong></a>, i added some extra stuff like a running instance checker, default bg fallback, and others, for more robust(?) scripting. Any help/issues really appreciated as i&rsquo;m still learning all of these scripting stuff(well my grammar too lol)</li>
+</ul>
 
                 <br>
 		<p class="back-to-posts"><a href="https://okiptkn.github.io/blog/">Back to posts</a></p>
