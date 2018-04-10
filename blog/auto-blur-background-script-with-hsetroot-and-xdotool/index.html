@@ -9,14 +9,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="referrer" content="no-referrer">
 <meta name="author" content="Restu Purnomo">
-<meta name="description" content="so yesterday when i was trying out this rather interesting wm(?), i found this auto-blur background script. It simply uses hsetroot to set a blurred image output as background. and i thought i would like one for my desktop.
-so here is the script (directly copied) :
-#!/bin/bash win=&quot;$(lsw)&quot; if [[ $win ]]; then hsetroot -fill $HOME/wall.jpg -blur 15 else hsetroot -fill $HOME/wall.jpg -blur 15 fi  the two main point is : the lsw command that according the wmutils readme is a utility to list window and another one is hsetroot command to blur the image as well as set the background">
+<meta name="description" content="so yesterday when i was trying out this rather interesting wm(?), i found this interesting script. It&rsquo;s an autoblur background script that&rsquo;s simply uses hsetroot to set a blurred image output as background.
+here is the script (directly copied) :
+#!/bin/bash win=&quot;$(lsw)&quot; if [[ $win ]]; then hsetroot -fill $HOME/wall.jpg -blur 15 else hsetroot -fill $HOME/wall.jpg -blur 15 fi  the two main point is : the lsw command that according to the wmutils readme is a utility to list window and another one is hsetroot a command to blur the image as well as set the background">
 
 <meta property="og:title" content="Auto-blur background script with hsetroot and xdotool" />
-<meta property="og:description" content="so yesterday when i was trying out this rather interesting wm(?), i found this auto-blur background script. It simply uses hsetroot to set a blurred image output as background. and i thought i would like one for my desktop.
-so here is the script (directly copied) :
-#!/bin/bash win=&quot;$(lsw)&quot; if [[ $win ]]; then hsetroot -fill $HOME/wall.jpg -blur 15 else hsetroot -fill $HOME/wall.jpg -blur 15 fi  the two main point is : the lsw command that according the wmutils readme is a utility to list window and another one is hsetroot command to blur the image as well as set the background" />
+<meta property="og:description" content="so yesterday when i was trying out this rather interesting wm(?), i found this interesting script. It&rsquo;s an autoblur background script that&rsquo;s simply uses hsetroot to set a blurred image output as background.
+here is the script (directly copied) :
+#!/bin/bash win=&quot;$(lsw)&quot; if [[ $win ]]; then hsetroot -fill $HOME/wall.jpg -blur 15 else hsetroot -fill $HOME/wall.jpg -blur 15 fi  the two main point is : the lsw command that according to the wmutils readme is a utility to list window and another one is hsetroot a command to blur the image as well as set the background" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://okiptkn.github.io/blog/auto-blur-background-script-with-hsetroot-and-xdotool/" />
 
@@ -61,11 +61,11 @@ so here is the script (directly copied) :
 
 
     
-    <link rel="stylesheet" href="https://okiptkn.github.io/css/reset.css?t=2018-04-08%2021%3a33%3a19.027872742%20%2b0700%20WIB%20m%3d%2b0.087807706">
-    <link rel="stylesheet" href="https://okiptkn.github.io/css/pygments.css?t=2018-04-08%2021%3a33%3a19.027872742%20%2b0700%20WIB%20m%3d%2b0.087807706">
-    <link rel="stylesheet" href="https://okiptkn.github.io/css/main.css?t=2018-04-08%2021%3a33%3a19.027872742%20%2b0700%20WIB%20m%3d%2b0.087807706">
+    <link rel="stylesheet" href="https://okiptkn.github.io/css/reset.css?t=2018-04-10%2021%3a20%3a22.728331151%20%2b0700%20WIB%20m%3d%2b0.106437188">
+    <link rel="stylesheet" href="https://okiptkn.github.io/css/pygments.css?t=2018-04-10%2021%3a20%3a22.728331151%20%2b0700%20WIB%20m%3d%2b0.106437188">
+    <link rel="stylesheet" href="https://okiptkn.github.io/css/main.css?t=2018-04-10%2021%3a20%3a22.728331151%20%2b0700%20WIB%20m%3d%2b0.106437188">
     
-        <link rel="stylesheet" href="https://okiptkn.github.io/css/override.css?t=2018-04-08%2021%3a33%3a19.027872742%20%2b0700%20WIB%20m%3d%2b0.087807706">
+        <link rel="stylesheet" href="https://okiptkn.github.io/css/override.css?t=2018-04-10%2021%3a20%3a22.728331151%20%2b0700%20WIB%20m%3d%2b0.106437188">
     
 
 
@@ -242,9 +242,9 @@ so here is the script (directly copied) :
             <div class="markdown">
                 
 
-<p>so yesterday when i was trying out this <a href="https://github.com/wmutils">rather interesting</a> wm(?), i found <a href="https://github.com/tymscar/wmutilsrc/blob/master/scripts/blur">this</a> auto-blur background script. It simply uses hsetroot to set a blurred image output as background. and i thought i would like one for my desktop.</p>
+<p>so yesterday when i was trying out this <a href="https://github.com/wmutils">rather interesting</a> wm(?), i found <a href="https://github.com/tymscar/wmutilsrc/blob/master/scripts/blur">this</a> interesting script. It&rsquo;s an autoblur background script that&rsquo;s simply uses <code>hsetroot</code> to set a blurred image output as background.</p>
 
-<p>so here is the script (directly copied) :</p>
+<p>here is the script (directly copied) :</p>
 
 <pre><code>#!/bin/bash
 win=&quot;$(lsw)&quot;
@@ -255,16 +255,18 @@ else
 fi
 </code></pre>
 
-<p>the two main point is : the <code>lsw</code> command that <a href="https://github.com/wmutils/core">according the wmutils readme</a> is a utility to list window and another one is <code>hsetroot</code> command to blur the image as well as set the background</p>
+<p>the two main point is : the <code>lsw</code> command that <a href="https://github.com/wmutils/core">according to the wmutils readme</a> is a utility to list window and another one is <code>hsetroot</code> a command to blur the image as well as set the background</p>
 
 <h4 id="looking-for-alternatives">looking for alternatives</h4>
 
-<p>First, we need to replace <code>lsw</code> with more common alternatives, one i could think of is <code>wmctrl</code> but running <code>wmctrl -l</code> will list all opened windows on every workspaces, you could probably specify a current workspaces for that but i doubt it would work on any wm without emwh support. And the other one is using <code>xdotool</code>, luckily it has a wonderfully convenient command to simply output the current active window id with :</p>
+<p>first we need to replace <code>lsw</code> with more common alternatives, one i could think of is <code>wmctrl</code> but running <code>wmctrl -l</code> will list all opened windows on every workspaces, you could probably specify a current workspace for that but i doubt it would work on any wm without emwh support.</p>
+
+<p>And the other one is using <code>xdotool</code>, at first i thought i would use its function to output window title but the problem is that any title contains character such as <code>[</code> <code>]</code> or <code>/</code> will get ignored, idk. upon re reading through the manpage i found a wonderfully convenient command to simply output the current active window id (which is only contains numbers) with :</p>
 
 <pre><code>xdotool getactivewindow
 </code></pre>
 
-<p>so let use this for the script</p>
+<p>so lets use this for the script</p>
 
 <pre><code>#!/bin/bash
 #
@@ -294,7 +296,7 @@ _main&quot;$@&quot;
 </code></pre>
 
 <ul>
-<li><strong>note</strong> : You may want to take a look at my ready made script on <a href="https://github.com/okiptkn/dotfiles/tree/master/.scripts/abg"><strong>here</strong></a>, i added some extra stuff like a running instance checker, default bg fallback, and others, for more robust(?) scripting. Any help/issues really appreciated as i&rsquo;m still learning all of these scripting stuff(well my grammar too lol)</li>
+<li><strong>note</strong> : You may want to take a look at my ready made script on <a href="https://github.com/okiptkn/dotfiles/tree/master/.scripts/abg"><strong>here</strong></a>, i added some extra stuff like a running instance checker, default bg fallback, and etc for more robust(?) scripting. Any help/issues really appreciated as i&rsquo;m still learning all of these scripting stuff(well my grammar too lol)</li>
 </ul>
 
                 <br>
