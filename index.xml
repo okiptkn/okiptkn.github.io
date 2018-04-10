@@ -17,7 +17,7 @@
       <pubDate>Sun, 08 Apr 2018 18:16:54 +0700</pubDate>
       
       <guid>https://okiptkn.github.io/blog/auto-blur-background-script-with-hsetroot-and-xdotool/</guid>
-      <description>so yesterday when i was trying out this rather interesting wm(?), i found this autoblur background script that&amp;rsquo;s simply uses hsetroot to set a blurred image output as background.
+      <description>so yesterday when i was trying out this rather interesting wm(?), i found this autoblur script that&amp;rsquo;s simply uses hsetroot to set a blurred image output as background.
 here is the script (directly copied) :
 #!/bin/bash win=&amp;quot;$(lsw)&amp;quot; if [[ $win ]]; then hsetroot -fill $HOME/wall.jpg -blur 15 else hsetroot -fill $HOME/wall.jpg -blur 15 fi  the two main point is : the lsw command that according to the wmutils readme is a utility to list window and another one is hsetroot a command to blur the image as well as set the background</description>
     </item>
