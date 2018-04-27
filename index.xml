@@ -19,8 +19,9 @@
       <guid>https://okiptkn.github.io/blog/e-mail-notifier-script-for-offline-mail-client/</guid>
       <description>i&amp;rsquo;ve been thinking for a while but, i&amp;rsquo;m really not suited to write a blog am i? well here&amp;rsquo;s another cheap ass script writing series to keep this blog somewhat alive.
 A simple and easy mail notifier script using wendy + lemonbar
- first set up your offline mail client with offlineimap + mutt/neomutt or anything you fancy go fetch wendy and install it
- Create a pop up notification script, i&amp;rsquo;m using lemonbar here(and will probably keep using it in the near future).</description>
+ first set up your offline mail client with offlineimap + mutt/neomutt or anything you fancy
+ go fetch wendy and install/compile it whatever
+ now create a pop-up script, i&amp;rsquo;m using lemonbar here(and will probably keep using it in the near future)</description>
     </item>
     
     <item>
