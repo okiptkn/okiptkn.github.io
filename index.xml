@@ -18,9 +18,9 @@
       
       <guid>https://okiptkn.github.io/blog/e-mail-notifier-script-for-offline-mail-client/</guid>
       <description>hello and welcome to another cheap ass script writing series to keep this blog somewhat alive. and well here is how to create simple yet easy mail notifier script using wendy + lemonbar
- first set up your offline mail client(well of course)
- go fetch wendy and install/compile it whatever
- create the pop-up script with lemonbar :
+ a). first set up your offline mail client(well of course)
+ b). go fetch wendy and install/compile it
+ c). create the pop-up script with lemonbar :
   #!/bin/bash # ### prevent a stacking notifications # we&#39;re gonna use wendy to automatically launch script &amp;quot;everytime&amp;quot;- # a mail was being fetched into a maildir.</description>
     </item>
     
