@@ -9,20 +9,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="referrer" content="no-referrer">
 <meta name="author" content="Restu Purnomo">
-<meta name="description" content="so yesterday when i was trying out this rather interesting wm (it has a flipping rainbow!!!!), i found this simple auto blur script that&rsquo;s also caught my interest (directly copied) :
-#!/bin/bash win=&quot;$(lsw)&quot; if [[ $win ]]; then hsetroot -fill $HOME/wall.jpg -blur 15 else hsetroot -fill $HOME/wall.jpg -blur 15 fi  it&rsquo;s simply uses lsw command that according to the wmutils readme is a utility to list window and then run hsetroot command to blur the image and set the output as background.">
+<meta name="description" content="i&rsquo;ve been thinking for a while but, i&rsquo;m really not suited to write a blog, am i? well here&rsquo;s another cheap ass script writing series to keep this blog somewhat alive.
+A simple and easy mail notifier script using wendy &#43; lemonbar
+ first set up your offline mail client with offlineimap &#43; mutt/neomutt or anything you fancy go fetch wendy and install it
+ Create a pop up notification script, i&rsquo;m using lemonbar here(and will probably keep using it in the near future).">
 
-<meta property="og:title" content="Auto-blur background script with hsetroot and xdotool" />
-<meta property="og:description" content="so yesterday when i was trying out this rather interesting wm (it has a flipping rainbow!!!!), i found this simple auto blur script that&rsquo;s also caught my interest (directly copied) :
-#!/bin/bash win=&quot;$(lsw)&quot; if [[ $win ]]; then hsetroot -fill $HOME/wall.jpg -blur 15 else hsetroot -fill $HOME/wall.jpg -blur 15 fi  it&rsquo;s simply uses lsw command that according to the wmutils readme is a utility to list window and then run hsetroot command to blur the image and set the output as background." />
+<meta property="og:title" content="E-mail notifier script for your offline mail client" />
+<meta property="og:description" content="i&rsquo;ve been thinking for a while but, i&rsquo;m really not suited to write a blog, am i? well here&rsquo;s another cheap ass script writing series to keep this blog somewhat alive.
+A simple and easy mail notifier script using wendy &#43; lemonbar
+ first set up your offline mail client with offlineimap &#43; mutt/neomutt or anything you fancy go fetch wendy and install it
+ Create a pop up notification script, i&rsquo;m using lemonbar here(and will probably keep using it in the near future)." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://okiptkn.github.io/blog/auto-blur-background-script-with-hsetroot-and-xdotool/" />
+<meta property="og:url" content="https://okiptkn.github.io/blog/e-mail-notifier-script-for-your-offline-mail-client/" />
 
 
 
-<meta property="article:published_time" content="2018-04-08T18:16:54&#43;07:00"/>
+<meta property="article:published_time" content="2018-04-27T20:26:43&#43;07:00"/>
 
-<meta property="article:modified_time" content="2018-04-08T18:16:54&#43;07:00"/>
+<meta property="article:modified_time" content="2018-04-27T20:26:43&#43;07:00"/>
 
 
 
@@ -38,10 +42,10 @@
 <title>
 
 
-     Auto-blur background script with hsetroot and xdotool 
+     E-mail notifier script for your offline mail client 
 
 </title>
-<link rel="canonical" href="https://okiptkn.github.io/blog/auto-blur-background-script-with-hsetroot-and-xdotool/">
+<link rel="canonical" href="https://okiptkn.github.io/blog/e-mail-notifier-script-for-your-offline-mail-client/">
 
 
 
@@ -59,11 +63,11 @@
 
 
     
-    <link rel="stylesheet" href="https://okiptkn.github.io/css/reset.css?t=2018-04-27%2023%3a11%3a24.36996656%20%2b0700%20WIB%20m%3d%2b0.096494302">
-    <link rel="stylesheet" href="https://okiptkn.github.io/css/pygments.css?t=2018-04-27%2023%3a11%3a24.36996656%20%2b0700%20WIB%20m%3d%2b0.096494302">
-    <link rel="stylesheet" href="https://okiptkn.github.io/css/main.css?t=2018-04-27%2023%3a11%3a24.36996656%20%2b0700%20WIB%20m%3d%2b0.096494302">
+    <link rel="stylesheet" href="https://okiptkn.github.io/css/reset.css?t=2018-04-27%2021%3a51%3a57.513766678%20%2b0700%20WIB%20m%3d%2b0.395137712">
+    <link rel="stylesheet" href="https://okiptkn.github.io/css/pygments.css?t=2018-04-27%2021%3a51%3a57.513766678%20%2b0700%20WIB%20m%3d%2b0.395137712">
+    <link rel="stylesheet" href="https://okiptkn.github.io/css/main.css?t=2018-04-27%2021%3a51%3a57.513766678%20%2b0700%20WIB%20m%3d%2b0.395137712">
     
-        <link rel="stylesheet" href="https://okiptkn.github.io/css/override.css?t=2018-04-27%2023%3a11%3a24.36996656%20%2b0700%20WIB%20m%3d%2b0.096494302">
+        <link rel="stylesheet" href="https://okiptkn.github.io/css/override.css?t=2018-04-27%2021%3a51%3a57.513766678%20%2b0700%20WIB%20m%3d%2b0.395137712">
     
 
 
@@ -95,8 +99,6 @@
                 
                 
                 
-                
-                    
                 
                     
                 
@@ -206,10 +208,6 @@
         
 
         
-            <a href="//kaskus.co.id/profile/6378267" target="_blank" rel="noopener"><img class="icon" src="https://okiptkn.github.io/img/kaskus.svg" alt="kaskus" /></a>
-        
-
-        
             <a href="mailto:restu[dot]okky[at]gmail[dot]com"><img class="icon" src="https://okiptkn.github.io/img/email.svg" alt="email" /></a>
         
 
@@ -228,7 +226,7 @@
                 <div class="title-container">
                     <div class="page-heading">
 
-    Auto-blur background script with hsetroot and xdotool
+    E-mail notifier script for your offline mail client
 
 </div>
 
@@ -236,7 +234,7 @@
                 </div>
                 <div class="meta">
                     
-                    <div class="date" title='Sun Apr 8 2018 46:86:54 WIB'>Apr 8, 2018</div>
+                    <div class="date" title='Fri Apr 27 2018 48:278:43 WIB'>Apr 27, 2018</div>
                     
                     
 		    <div class="reading-time"><div class="middot"></div>2 minutes read</div>
@@ -246,60 +244,75 @@
             <div class="markdown">
                 
 
-<p>so yesterday when i was trying out this <a href="https://github.com/wmutils">rather interesting</a> wm <em>(it has a flipping rainbow!!!!)</em>, i found <a href="https://github.com/tymscar/wmutilsrc/blob/master/scripts/blur">this</a> simple auto blur script that&rsquo;s also caught my interest (directly copied) :</p>
+<p>i&rsquo;ve been thinking for a while but, i&rsquo;m really not suited to write a blog, am i? well here&rsquo;s another cheap ass script writing series to keep this blog somewhat alive.</p>
 
-<pre><code>#!/bin/bash
-win=&quot;$(lsw)&quot;
-if [[ $win ]]; then
-	hsetroot -fill $HOME/wall.jpg -blur 15
-else
-	hsetroot -fill $HOME/wall.jpg -blur 15
-fi
-</code></pre>
-
-<p>it&rsquo;s simply uses <code>lsw</code> command that <a href="https://github.com/wmutils/core">according to the wmutils readme</a> is a utility to list window and then run <code>hsetroot</code> command to blur the image and set the output as background.</p>
-
-<h4 id="looking-for-alternatives">looking for alternatives</h4>
-
-<p>first i thought i would need to replace <code>lsw</code> with a more common alternatives, one i could think of is <code>wmctrl</code> but running <code>wmctrl -l</code> will list all opened windows on every workspaces, you could probably specify a current workspace for that but i doubt it would work on any wm without emwh support.</p>
-
-<p>And the other one is using <code>xdotool</code>, at first i thought i would use its function to output window title but the problem is that any title contains character such as <code>[</code> <code>]</code> or <code>/</code> will get ignored, idk. luckily though, upon re-reading through the manpages i found this wonderfully convenient command to simply output the current active window id, which is exactly what i need as it&rsquo;s only contains numbers :</p>
-
-<pre><code>xdotool getactivewindow
-</code></pre>
-
-<p>now rewrite the script</p>
-
-<pre><code>#!/bin/bash
-#
-
-# write the function first
-  lalala() {
-    win=&quot;$(xdotool getactivewindow)&quot;
-    
-    # check if the command above output something and run hsetroot 
-    if [[ $win -eq 0 ]]; then
-        hsetroot -fill /path/yourimage.png
-    else
-        hsetroot -fill /path/yourimage.png -blur 4
-    fi
-}
-
-# and then loop it
-_main() {
-    while true ; do
-        echo &quot;$(lalala)&quot;
-        sleep 1
-    done
-} &gt; /dev/null 2&gt;&amp;1
-
-# now call the main function
-_main&quot;$@&quot;
-</code></pre>
+<p>A simple and easy mail notifier script using wendy + lemonbar</p>
 
 <ul>
-<li><strong>note</strong> : You may want to take a look at my ready made script on <a href="https://github.com/okiptkn/dotfiles/tree/master/.scripts/abg"><strong>here</strong></a>, i added some stuff like a previous running instance checker, default bg fallback, etc for more robust(?) scripting. Any help/issues really appreciated as i&rsquo;m still learning all of these scripting stuff(well my grammar too lol)</li>
+<li>first set up your offline mail client with offlineimap + mutt/neomutt or anything you fancy</li>
+
+<li><p>go fetch <a href="https://github.com/z3bra/wendy">wendy</a> and install it</p></li>
+
+<li><p>Create a pop up notification script, i&rsquo;m using lemonbar here(and will probably keep using it in the near future). Never forgetti to put this script on your <code>$PATH</code>
+```
+#!/bin/bash
+#</p></li>
 </ul>
+
+<h3 id="prevent-a-stacking-notifications">prevent a stacking notifications</h3>
+
+<pre><code># we're gonna use wendy to automatically launch script &quot;everytime&quot; there's mail fetched
+# so this will exit the script itself if it's already running
+</code></pre>
+
+<p>for pid in $(pidof -x mailnotifier); do
+    if [ $pid != $$ ]; then
+        sleep 0.1
+        exit 0;
+    fi
+done</p>
+
+<h3 id="set-some-variables">set some variables</h3>
+
+<p>_popname=&ldquo;mailnotifier&rdquo;
+_micon=&rdquo;   *  &ldquo;
+_ficon=&ldquo;FontAwesome:style=Regular:size=12&rdquo;
+_cyan=&ldquo;#6BC2B7&rdquo;</p>
+
+<p>_detnu() {
+    ### count only recent fetched email that&rsquo;s under 1 min period of time
+        # meaning the counter will reset to zero after 1 min
+    _numail=&ldquo;$(find /your/mail/dir/INBOX/new/* -mmin -1 | wc -l)&rdquo;
+    echo -e &ldquo;%{l}        You&rsquo;ve got %{F$_cyan}${_numail}%{F-} new mail&rdquo;
+}</p>
+
+<p>_main() {
+            # loop so that the &ldquo;text&rdquo; will get updated on each of new fetched mail
+    while true ; do
+        echo -e &ldquo;%{l}$(_detnu)%{r}%{B$_cyan}${_micon}%{B-}&rdquo;
+        sleep 1
+    done |<br />
+            # pipe the &ldquo;text&rdquo; to lemon
+        lemonbar -d -n &ldquo;${_popname}&rdquo; -g 210x40+20+90 -f &ldquo;PT Sans Narrow:style=Bold:size=12&rdquo; -f &ldquo;$_ficon&rdquo; -F &ldquo;#27292A&rdquo; -B &ldquo;#E3E3E3&rdquo;
+}</p>
+
+<h3 id="call-the-main-function">call the main function</h3>
+
+<p>_main&rdquo;$@&rdquo;</p>
+
+<pre><code>
+* now create another script for wendy and run it from `.xinitrc`
+</code></pre>
+
+<p>#!/bin/bash
+#</p>
+
+<h1 id="set-wendy-to-watch-for-file-creation-256-and-file-moved-to-128-event-inside-your-maildir-and-check-for-every-1-second-interval">set wendy to watch for file creation [256] and file moved to [128] event inside your maildir and check for every 1 second interval,</h1>
+
+<h1 id="then-run-the-script-above-and-exit-after-20-second">then run the script above and exit after 20 second</h1>
+
+<p>wendy -m 384 -f ~/path/to/yourmaildir/INBOX/new -t 1 timeout 20s mailnotifier
+```</p>
 
                 <br>
 		<p class="back-to-posts"><a href="https://okiptkn.github.io/blog/">Back to posts</a></p>

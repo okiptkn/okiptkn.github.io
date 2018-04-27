@@ -1,15 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blog on github | okiptkn</title>
+    <title>Blog on hisomasooooooo~</title>
     <link>https://okiptkn.github.io/blog/</link>
-    <description>Recent content in Blog on github | okiptkn</description>
+    <description>Recent content in Blog on hisomasooooooo~</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Sat, 22 Aug 2015 06:42:21 -0700</lastBuildDate>
     
 	<atom:link href="https://okiptkn.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>E-mail notifier script for offline mail client</title>
+      <link>https://okiptkn.github.io/blog/e-mail-notifier-script-for-offline-mail-client/</link>
+      <pubDate>Fri, 27 Apr 2018 20:26:43 +0700</pubDate>
+      
+      <guid>https://okiptkn.github.io/blog/e-mail-notifier-script-for-offline-mail-client/</guid>
+      <description>i&amp;rsquo;ve been thinking for a while but, i&amp;rsquo;m really not suited to write a blog, am i? well here&amp;rsquo;s another cheap ass script writing series to keep this blog somewhat alive.
+A simple and easy mail notifier script using wendy + lemonbar
+ first set up your offline mail client with offlineimap + mutt/neomutt or anything you fancy go fetch wendy and install it
+ Create a pop up notification script, i&amp;rsquo;m using lemonbar here(and will probably keep using it in the near future).</description>
+    </item>
     
     <item>
       <title>Auto-blur background script with hsetroot and xdotool</title>
