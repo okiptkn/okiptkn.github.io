@@ -9,18 +9,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="referrer" content="no-referrer">
 <meta name="author" content="Restu Purnomo">
-<meta name="description" content="i&rsquo;ve been thinking for a while but, i&rsquo;m really not suited to write a blog am i? well here&rsquo;s another cheap ass script writing series to keep this blog somewhat alive.
-A simple and easy mail notifier script using wendy &#43; lemonbar
- first set up your offline mail client with offlineimap &#43; mutt/neomutt or anything you fancy
+<meta name="description" content="hello and welcome to another cheap ass script writing series to keep this blog somewhat alive. and well here is how to create simple yet easy mail notifier script using wendy &#43; lemonbar
+ first you need to set up your offline mail client(well ofcourse)
  go fetch wendy and install/compile it whatever
- now create a pop-up script, i&rsquo;m using lemonbar here(and will probably keep using it in the near future)">
+ create the pop-up script with lemonbar :
+  #!/bin/bash # ### prevent a stacking notifications # we&#39;re gonna use wendy to automatically launch script &quot;everytime&quot;- # a mail was being fetched into a maildir.">
 
 <meta property="og:title" content="E-mail notifier script for offline mail client" />
-<meta property="og:description" content="i&rsquo;ve been thinking for a while but, i&rsquo;m really not suited to write a blog am i? well here&rsquo;s another cheap ass script writing series to keep this blog somewhat alive.
-A simple and easy mail notifier script using wendy &#43; lemonbar
- first set up your offline mail client with offlineimap &#43; mutt/neomutt or anything you fancy
+<meta property="og:description" content="hello and welcome to another cheap ass script writing series to keep this blog somewhat alive. and well here is how to create simple yet easy mail notifier script using wendy &#43; lemonbar
+ first you need to set up your offline mail client(well ofcourse)
  go fetch wendy and install/compile it whatever
- now create a pop-up script, i&rsquo;m using lemonbar here(and will probably keep using it in the near future)" />
+ create the pop-up script with lemonbar :
+  #!/bin/bash # ### prevent a stacking notifications # we&#39;re gonna use wendy to automatically launch script &quot;everytime&quot;- # a mail was being fetched into a maildir." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://okiptkn.github.io/blog/e-mail-notifier-script-for-offline-mail-client/" />
 
@@ -65,11 +65,11 @@ A simple and easy mail notifier script using wendy &#43; lemonbar
 
 
     
-    <link rel="stylesheet" href="https://okiptkn.github.io/css/reset.css?t=2018-04-27%2023%3a55%3a10.969258221%20%2b0700%20WIB%20m%3d%2b0.094636710">
-    <link rel="stylesheet" href="https://okiptkn.github.io/css/pygments.css?t=2018-04-27%2023%3a55%3a10.969258221%20%2b0700%20WIB%20m%3d%2b0.094636710">
-    <link rel="stylesheet" href="https://okiptkn.github.io/css/main.css?t=2018-04-27%2023%3a55%3a10.969258221%20%2b0700%20WIB%20m%3d%2b0.094636710">
+    <link rel="stylesheet" href="https://okiptkn.github.io/css/reset.css?t=2018-04-28%2000%3a30%3a10.681012529%20%2b0700%20WIB%20m%3d%2b0.083479331">
+    <link rel="stylesheet" href="https://okiptkn.github.io/css/pygments.css?t=2018-04-28%2000%3a30%3a10.681012529%20%2b0700%20WIB%20m%3d%2b0.083479331">
+    <link rel="stylesheet" href="https://okiptkn.github.io/css/main.css?t=2018-04-28%2000%3a30%3a10.681012529%20%2b0700%20WIB%20m%3d%2b0.083479331">
     
-        <link rel="stylesheet" href="https://okiptkn.github.io/css/override.css?t=2018-04-27%2023%3a55%3a10.969258221%20%2b0700%20WIB%20m%3d%2b0.094636710">
+        <link rel="stylesheet" href="https://okiptkn.github.io/css/override.css?t=2018-04-28%2000%3a30%3a10.681012529%20%2b0700%20WIB%20m%3d%2b0.083479331">
     
 
 
@@ -250,25 +250,24 @@ A simple and easy mail notifier script using wendy &#43; lemonbar
                 </div>
             </div>
             <div class="markdown">
-                <p>i&rsquo;ve been thinking for a while but, i&rsquo;m really not suited to write a blog am i? well here&rsquo;s another cheap ass script writing series to keep this blog somewhat alive.</p>
-
-<p>A simple and easy mail notifier script using wendy + lemonbar</p>
+                <p>hello and welcome to another cheap ass script writing series to keep this blog somewhat alive.
+and well here is how to create simple yet easy mail notifier script using <code>wendy</code> + <code>lemonbar</code></p>
 
 <ul>
-<li><p>first set up your offline mail client with offlineimap + mutt/neomutt or anything you fancy</p></li>
+<li><p>first you need to set up your offline mail client(well ofcourse)</p></li>
 
 <li><p>go fetch <a href="https://github.com/z3bra/wendy">wendy</a> and install/compile it whatever</p></li>
 
-<li><p>now create a pop-up script, i&rsquo;m using lemonbar here(and will probably keep using it in the near future)</p></li>
+<li><p>create the pop-up script with <code>lemonbar</code> :</p></li>
 </ul>
 
 <pre><code>#!/bin/bash
 #
 
 ### prevent a stacking notifications 
-    # we're gonna use wendy to automatically launch script &quot;everytime&quot;
-    # a mail was being fetched into a maildir repetitively.
-    # this will exit the script if the previous one still running
+    # we're gonna use wendy to automatically launch script &quot;everytime&quot;-
+    # a mail was being fetched into a maildir.
+    # this will exit the script if the previous one is still running
 for pid in $(pidof -x mailnotifier); do
     if [ $pid != $$ ]; then
         sleep 0.1
@@ -305,13 +304,13 @@ _main&quot;$@&quot;
 </code></pre>
 
 <ul>
-<li>now create another script for wendy and run it from <code>.xinitrc</code></li>
+<li>now create another script for wendy to automatically call the pop-up script above. (run this one in the background)</li>
 </ul>
 
 <pre><code>#!/bin/bash
 #
 
-# set wendy to watch for file creation [256] and file moved_to [128] event 
+# set wendy to watch for file creation [256] and file moved_to [128] event- 
 # inside your maildir and check for any event on 1 second interval, 
 # then run the pop-up script above and exit after 20 second
 
